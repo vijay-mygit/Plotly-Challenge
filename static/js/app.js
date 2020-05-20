@@ -1,4 +1,4 @@
-d3.json("../../samples.json").then((data) => {
+d3.json("././samples.json").then((data) => {
     dropDown();
     var xValue = data["samples"][0]["otu_ids"];
     var yValue = data["samples"][0]["sample_values"];
