@@ -1,4 +1,4 @@
-d3.json("./data/samples.json").then((data) => {
+d3.json("../../samples.json").then((data) => {
     dropDown();
     var xValue = data["samples"][0]["otu_ids"];
     var yValue = data["samples"][0]["sample_values"];
@@ -120,7 +120,7 @@ function buildPlots(xValue,yValue,hoverText,metaData,washFreq){
 };
 
 function dropDown(){
-    d3.json("./data/samples.json").then((data)=>{
+    d3.json("../../samples.json").then((data)=>{
         var name = data.names;                
         // console.log(name);
         var idSelect = document.getElementById('selDataset')
@@ -135,7 +135,7 @@ function dropDown(){
 d3.select('#selDataset').on('change',optionChanged);
 
 var optionChanged = function optionChanged(name) {
-    d3.json("./data/samples.json").then((data)=> {
+    d3.json("../../samples.json").then((data)=> {
         var newSample = data["samples"].filter(i =>i.id == name);
         var metadataNew = data["metadata"].filter(i =>i.id == name);
         var metadata_new = metadataNew[0];
