@@ -75,22 +75,7 @@ function buildPlots(xValue,yValue,hoverText,metaData,washFreq){
           value: washFreq,
           title: { text: "Scrubs per Week" },
           type: "indicator",
-          mode: "gauge+number",
-        //   text: [
-        //     "0-1",
-        //     "1-2",
-        //     "2-3",
-        //     "3-4",
-        //     "4-5",
-        //     "5-6",
-        //     "6-7",
-        //     "7-8",
-        //     "8-9",
-        //     ""
-        //   ],
-        //   textinfo: "text",
-        //   textposition: "inside",
-        //   delta: { reference: 380 },
+          mode: "gauge+number",          
           gauge: {
             axis: { range: [null, 9]},
             bar: { color: "darkgray" },
@@ -104,12 +89,7 @@ function buildPlots(xValue,yValue,hoverText,metaData,washFreq){
               {range: [6, 7], color: "green" },
               {range: [7, 8], color: "Green" },
               {range: [8, 9], color: "green" },
-            ],
-            // threshold: {
-            //   line: { color: "red", width: 4 },
-            //   thickness: 0.75,
-            //   value: 9
-            // }
+            ],            
           }
         }
       ];
